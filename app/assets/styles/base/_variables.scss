@@ -1,0 +1,39 @@
+$blue: #004358;
+$blue-light: #f1f7fd;
+$green: #1f8a70;
+$grey: #454545;
+$grey-input: #b8b7b7;
+$grey-light: #e5e5e5;
+$grey-font: #676767;
+$yellow: #ffe11a;
+$orange: #fd7400;
+
+/* FONT Variables
+// --------------------------------------------------*/
+$font-stack: 'Ubuntu', sans-serif;
+$font-color: $grey;
+$font-size: 1rem;
+$line-height: 1.2;
+
+/* GRID Variables
+// --------------------------------------------------*/
+
+/*main queries*/
+$atSmall: 530 !default;
+$atMedium: 800 !default;
+$atLarge: 1010 !default;
+
+// Default grid
+// -------------------------
+$gridColumns:             12 !default;
+$gridColumnWidth:         60px !default;
+$gridGutterWidth:         20px !default;
+$gridRowWidth:            $gridColumns*($gridColumnWidth+$gridGutterWidth);
+
+// Fluid grid - NOT USED
+// -------------------------
+$fluidGridColumnWidth: percentage(($gridColumnWidth+$gridGutterWidth)/$gridRowWidth);
+
+@function getColumnWidth($columnNumber){
+  @return $columnNumber*$fluidGridColumnWidth;
+}

@@ -1,0 +1,18 @@
+.wrapper {
+  padding-left: ($gridGutterWidth/2);
+  padding-right: ($gridGutterWidth/2);
+  max-width: 1230px;
+  margin-right: auto;
+  margin-left: auto;
+  &--narrow{
+    max-width: 470px;
+  }
+  &--medium{
+    max-width: 976px;
+  }
+  .wrapper{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &--relative{position: relative;}
+}

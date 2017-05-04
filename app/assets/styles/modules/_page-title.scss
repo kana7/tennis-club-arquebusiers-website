@@ -1,0 +1,21 @@
+.page-title{
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: $blue;
+  margin: -5px 0 -15px;
+}
+.page-subtitle{
+    text-transform: uppercase;
+    font-size: 1.0625rem;
+    color: $blue;
+    margin: 12px 0 10px;
+}
+
+.page-title, .page-subtitle{
+  &--no-uppercase{
+    text-transform: none !important;
+  }
+}

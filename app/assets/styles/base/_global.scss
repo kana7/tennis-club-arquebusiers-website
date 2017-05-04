@@ -1,0 +1,55 @@
+html{
+  height: 100%;
+}
+body {
+  @include base-style();
+  position: relative;
+  min-height: 100%;
+}
+
+button, input, optgroup, select, textarea{
+  font-family: $font-stack;
+}
+
+video, iframe{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.video{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    outline: 0;
+  }
+}
+*{
+  box-sizing: border-box;
+}
+.link{
+  display: inline-block;
+  color: $grey;
+  text-decoration: underline;
+  &--no-uppercase{text-transform: none;}
+  &--no-bold{font-weight: 400;}
+  &--underline{text-decoration: underline;}
+}
+a.link:hover{
+  text-decoration: underline;
+}
+span.caret{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid $blue;
+  transition: all .3s ease;
+}
