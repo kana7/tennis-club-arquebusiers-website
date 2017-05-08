@@ -1,4 +1,4 @@
-.news-list{
+.list{
   @extend %panel;
   background-color: white;
   width: 100%;
@@ -33,14 +33,19 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      li{
-        flex: 0 0 33%;
-      }
     }
     li{
       &:not(:first-child){
         border-top: 1px solid $grey-light;
       }
+    }
+    &--scroll-over-three{
+      li{
+        flex: 0 0 33%;
+      }
+    }
+    &:not(&--scroll-over-three){
+      li{flex: 1 0 auto;}
     }
   }
   &__item{
@@ -53,7 +58,7 @@
       justify-content: center;
     }
     h3, p{margin: 0;}
-    h3{color: $blue; font-weight: 600; font-size: 1rem;}
+    h3{color: $blue; font-weight: 600; font-size: 1rem; margin-bottom: 5px;}
     p{
       font-size: 0.875rem;
       span{font-weight: 600; color: $blue; &:hover{text-decoration: underline; cursor: pointer;}}
