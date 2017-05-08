@@ -29,8 +29,10 @@
         a{
           display: block;
           padding: 0 0.625rem;
-          &.active{
-            background-color: darken($blue, 10%);
+          span.icon{
+            vertical-align: middle;
+            font-size: 18px;
+            padding-right: 5px;
           }
         }
         @include atMedium{
@@ -43,27 +45,6 @@
           position: relative;
           top: 5px;
         }
-      }
-      &__login{
-        position: relative;
-        z-index: 1;
-        &--is-open{
-          .site-header__top__links__login-form{
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      }
-      &__login-form{
-        position: absolute;
-        display: block;
-        visibility: hidden;
-        opacity: 0;
-        z-index: 10;
-        right: 0;
-        transition: all .3s ease;
-        transform: translateY(-10px);
       }
     }
   }
