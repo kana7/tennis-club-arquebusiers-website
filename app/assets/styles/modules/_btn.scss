@@ -10,6 +10,12 @@
     height: 54px;
     font-size: 0.874rem;
   }
+  &--med{
+    padding: 0 55px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.875rem;
+  }
   &--small{
     padding: 0 1.25rem;
     font-size: 0.875rem;
@@ -23,6 +29,10 @@
   }
   &--green{
     background-color: $green;
+    color: #ffffff;
+  }
+  &--orange{
+    background-color: $orange;
     color: #ffffff;
   }
   &__icons{
