@@ -13,6 +13,7 @@
     padding: 0 1.5625rem;
     border-bottom: 1px solid $grey-light;
     height: 45px;
+    &--no-height{height: auto;}
     &__meta{text-decoration: none; font-size: 0.875rem;}
   }
   &__title{
@@ -27,6 +28,13 @@
       color: $grey-font;
       font-size: 1.0625rem;
     }
+  }
+  &__content{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    p{font-size: inherit;}
+    .red{color: $red; font-weight: 600;}
   }
   &--flex{
     &{
