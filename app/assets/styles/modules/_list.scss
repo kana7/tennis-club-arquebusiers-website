@@ -1,85 +1,164 @@
-.list{
+.list {
   @extend %panel;
   background-color: white;
   width: 100%;
-  &{
+
+  & {
     display: flex;
     flex-direction: column;
     align-items: stretch;
   }
-  &__header, &__footer{
+
+  &__footer,
+  &__header {
     height: 45px;
     line-height: 45px;
     padding: 0 0.875rem;
     background-color: $blue;
     color: white;
-    &>*{
+
+    & > * {
       display: inline-block;
       font-size: 1rem;
       margin: 0;
       font-weight: 600;
       text-transform: uppercase;
-      &[href]:hover{
+
+      &[href]:hover {
         text-decoration: underline;
       }
     }
   }
-  &__body{
+
+  &__body {
     height: 265px;
     margin: 0;
     padding: 0;
     overflow: auto;
-    &{
+
+    & {
       display: flex;
       flex-grow: 1;
       flex-direction: column;
     }
-    li{
-      &:not(:first-child){
+
+    li {
+      &:not(:first-child) {
         border-top: 1px solid $grey-light;
       }
     }
-    &--scroll-over-three{
-      li{
+
+    &--scroll-over-three {
+      li {
         flex: 0 0 33%;
       }
     }
-    &:not(&--scroll-over-three){
-      li{flex: 1 0 auto;}
+
+    &:not(&--scroll-over-three):not(&--fb-start) {
+      li {
+        flex: 1 0 auto;
+      }
     }
   }
-  &__item, &__content{padding: 0 1.25rem;}
-  &__content{
+
+  &__content,
+  &__item {
+    padding: 0 1.25rem;
+  }
+
+  &__content {
     font-size: 0.875rem;
     line-height: 20px;
     text-align: left;
-    p{font-size: inherit;}
-    .red{color: $red; font-weight: 600;}
+
+    p {
+      font-size: inherit;
+    }
+
+    .red {
+      color: $red;
+      font-weight: 600;
+    }
   }
-  &__item{
+
+  &__item {
     line-height: 20px;
-    &{
+
+    & {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    h3, p{margin: 0;}
-    h3{color: inherit; font-weight: 600; font-size: 1rem; margin-bottom: 5px;}
-    p{
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      color: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    p {
       font-size: 0.875rem;
-      span{font-weight: 600; color: inherit; &:hover{text-decoration: underline; cursor: pointer;}}
+
+      span {
+        font-weight: 600;
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__cat {
+      color: inherit;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 0.875rem 1.25rem;
+      margin: 0 -1.25rem;
     }
   }
-  &--blue{
-    .list__header, .list__footer{background-color: $blue;}
-    .list__item{color: $blue;}
+
+  &--blue {
+    .list__footer,
+    .list__header {
+      background-color: $blue;
+    }
+
+    .list__item {
+      color: $blue;
+      border-color: $blue;
+    }
   }
-  &--green{
-    .list__header, .list__footer{background-color: $green;}
-    .list__item{color: $green;}
+
+  &--green {
+    .list__footer,
+    .list__header {
+      background-color: $green;
+    }
+
+    .list__item {
+      color: $green;
+      border-color: $green;
+    }
   }
-  &--orange{
-    .list__header, .list__footer{background-color: $orange;}
-    .list__item{color: $orange;}
+
+  &--orange {
+    .list__footer,
+    .list__header {
+      background-color: $orange;
+    }
+
+    .list__item {
+      color: $orange;
+      border-color: $orange;
+    }
   }
 }

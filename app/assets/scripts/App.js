@@ -1,6 +1,7 @@
 import { Dropdown } from './modules/Dropdown';
 import { Slider } from './modules/Slider';
 import { ChrLimits } from './modules/ChrLimits';
+import { Collapse } from './modules/Collapse';
 
 import $ from 'jquery';
 
@@ -13,5 +14,8 @@ $(function(){
   });
   $('[data-chrLimit]').each(function(){
     new ChrLimits($(this));
+  });
+  $('[data-collapse]').each(function(){
+    new Collapse($(this));
   });
 });

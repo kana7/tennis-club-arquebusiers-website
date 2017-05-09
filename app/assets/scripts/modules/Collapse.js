@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class BottomSlider {
+export class Collapse{
   constructor(element, trigger, index) {
     this.element = element;
     this.trigger = (typeof trigger !== "undefined")?trigger:this.element.children(":first");
@@ -18,13 +18,11 @@ class BottomSlider {
   toggleOpen(){
     if (this.content[0].style.maxHeight){
       this.content[0].style.maxHeight = null;
-      this.element.removeClass('extend--is-open');
+      this.element.removeClass('collapse--is-open');
     }
     else {
       this.content[0].style.maxHeight = this.content.prop('scrollHeight') + 'px'
-      this.element.addClass('extend--is-open');
+      this.element.addClass('collapse--is-open');
     }
   }
 }
-
-export default BottomSlider;
