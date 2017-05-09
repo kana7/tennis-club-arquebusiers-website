@@ -8,7 +8,7 @@ $(function(){
   $('.primary-nav .primary-nav__onglet').each(function(){
     new Dropdown($(this));
   });
-  $('.slider, .slider-main').each(function(){
+  $('.slider, .slider-main:not(.slider-main--static)').each(function(){
     new Slider($(this));
   });
   $('[data-chrLimit]').each(function(){
