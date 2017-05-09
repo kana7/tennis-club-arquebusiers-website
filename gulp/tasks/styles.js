@@ -13,7 +13,7 @@ gulp.task('sass', function () {
   return gulp.src('./app/assets/styles/**/*.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({ includePaths : ['node_modules/normalize-scss/sass'] }).on('error', sass.logError))
-  .pipe(postcss([hexrgba, uniqueSelectors, autoprefixer, discardDuplicates, mergeRules]))
+  .pipe(postcss([hexrgba, uniqueSelectors, require('postcss-flexibility'), autoprefixer, discardDuplicates, mergeRules]))
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('./app/temp/styles'));
 });

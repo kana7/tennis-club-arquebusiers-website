@@ -30,7 +30,7 @@
       padding: 20px 1.875rem;
       font-size: 1.0625rem;
       color: white;
-      .flexbox &{
+      &{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -60,7 +60,7 @@
     padding: 20px 1.875rem;
     font-size: 1.0625rem;
     color: white;
-    .flexbox &{
+    &{
       display: flex;
       flex-direction: column;
       justify-content: center;

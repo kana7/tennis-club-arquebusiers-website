@@ -7,6 +7,7 @@
     display: block;
   }
   @extend %panel;
+  width: 100%;
   background-color: #ffffff;
   &__header{
     padding: 0 1.5625rem;
@@ -28,7 +29,7 @@
     }
   }
   &--flex{
-    .flexbox &{
+    &{
       &__body{
         display: flex;
         flex-direction: column;
@@ -68,6 +69,7 @@
     }
   }
   &--img{
+    width: auto !important;
     .card__title{
       width: 100%;
       white-space: nowrap;

@@ -132,7 +132,7 @@
     &__medium-pull-right{
       float: right;
     }
-    .flexbox &--equal-height-at-medium {
+    &--equal-height-at-medium {
       display: flex;
       & div[class^="row__"]{
         float: none;
@@ -175,7 +175,7 @@
     &__large-pull-right{
       float: right;
     }
-    .flexbox &--equal-height-at-large {
+    &--equal-height-at-large {
       display: flex;
       & div[class^="row__"]{
         float: none;
@@ -194,29 +194,4 @@
 
 .clearfix{
   @include clearfix;
-}
-
-.flexbox{
-  .flex-row{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    &--left-align{
-      align-items: flex-start !important;
-    }
-    &>*:not(:last-child){margin-bottom: 10px;}
-    @include atMedium{
-      &:not(.flex-row--column-flow){
-        flex-flow: row;
-        &>*:not(:last-child){margin-bottom: 0;}
-      }
-    }
-  }
-
-  .flex-item{
-    &--end{
-      align-self: flex-end;
-    }
-  }
 }
