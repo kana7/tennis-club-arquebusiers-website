@@ -1,41 +1,53 @@
-.btn{
+.btn {
   display: inline-block;
   border-radius: 5px;
   border: none;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  &--large{
+
+  &--large {
     padding: 1.25rem;
     height: 54px;
     font-size: 0.874rem;
   }
-  &--med{
+
+  &--med {
     padding: 0 55px;
     height: 40px;
     line-height: 40px;
     font-size: 0.875rem;
   }
-  &--small{
+
+  &--small {
     padding: 0 1.25rem;
     font-size: 0.875rem;
     text-align: center;
     height: 30px;
     line-height: 30px;
   }
-  &--blue{
+
+  &--blue {
     background-color: $blue;
-    color: #ffffff;
+    color: white;
   }
-  &--green{
+
+  &--green {
     background-color: $green;
-    color: #ffffff;
+    color: white;
   }
-  &--orange{
+
+  &--orange {
     background-color: $orange;
-    color: #ffffff;
+    color: white;
   }
-  &__icons{
+
+  &--grey {
+    background-color: $grey-btn;
+    color: white;
+  }
+
+  &__icons {
     display: inline-block;
     position: relative;
     bottom: 2px;

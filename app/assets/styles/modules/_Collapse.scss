@@ -24,6 +24,10 @@
   &.collapse--is-open {
     & > *:first-child {
       border-color: $grey-light;
+
+      span.icon {
+        transform: rotate(90deg);
+      }
     }
   }
 }

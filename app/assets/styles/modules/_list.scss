@@ -31,15 +31,20 @@
   }
 
   &__body {
-    height: 265px;
+    /*height: 265px;*/
     margin: 0;
     padding: 0;
     overflow: auto;
 
     & {
       display: flex;
-      flex-grow: 1;
       flex-direction: column;
+      align-items: stretch;
+    }
+
+    & > ul {
+      margin: 0;
+      padding: 0;
     }
 
     li {
@@ -54,16 +59,29 @@
       }
     }
 
-    &:not(&--scroll-over-three):not(&--fb-start) {
+    &--fb-space-between {
+      justify-content: space-between;
+      flex: 1 0 auto;
+    }
+
+    &:not(&--scroll-over-three):not(&--fb-start):not(&--fb-space-between) {
       li {
         flex: 1 0 auto;
       }
+    }
+
+    &--padding-bottom {
+      padding-bottom: 15px;
     }
   }
 
   &__content,
   &__item {
     padding: 0 1.25rem;
+
+    &--br-bottom {
+      border-bottom: 1px solid $grey-light;
+    }
   }
 
   &__content {
@@ -121,8 +139,36 @@
       font-size: 0.9375rem;
       font-weight: 600;
       text-align: left;
-      padding: 0.875rem 1.25rem;
+      padding: 14px 1.25rem 12px;
       margin: 0 -1.25rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      span.icon {
+        font-size: 14px;
+        transform-origin: 50%;
+        margin-bottom: -2px;
+        transform: rotate(0deg);
+        display: inline-block;
+        transition: transform 0.35s ease;
+      }
+    }
+
+    &--last-row {
+      flex: 0 0 100%;
+      width: 100%;
+      align-self: flex-end;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      .btn {
+        padding: 0;
+        flex: 0 0 115px;
+      }
     }
   }
 
@@ -146,7 +192,6 @@
 
     .list__item {
       color: $green;
-      border-color: $green;
     }
   }
 
@@ -158,7 +203,6 @@
 
     .list__item {
       color: $orange;
-      border-color: $orange;
     }
   }
 }

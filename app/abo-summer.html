@@ -173,29 +173,66 @@
                   <div class="list__header">
                     <h2>BULLETIN D'INSCRIPTION</h2>
                   </div>
-                  <ul class="list__body list__body--fb-start">
-                    <li data-collapse class="list__item">
-                      <div class="list__item__cat">Coordonnées</div>
-                      <div>
-                        <div class="collapse__container">
-                          <div class="input-group input-group--fb-col-spread">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Nom">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Prénom">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Date de naissance">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Conjointe ?">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Rue">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Code postal">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Téléphone domestique">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Téléphone bureau">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="GSM 1">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="GSM 2">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Fax">
-                            <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="E-mail">
+                  <div class="list__body list__body--fb-space-between list__body--padding-bottom">
+                    <ul>
+                      <li data-collapse class="list__item">
+                        <div class="list__item__cat">Coordonnées <span class="icon icon--arrow"></span></div>
+                        <div>
+                          <div class="collapse__container">
+                            <div class="input-group input-group--fb-col-spread">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Nom">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Prénom">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Date de naissance">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Conjointe ?">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Rue">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Code postal">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Téléphone domestique">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Téléphone bureau">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="GSM 1">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="GSM 2">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="Fax">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="E-mail">
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
+                      </li>
+                      <li data-collapse class="list__item">
+                        <div class="list__item__cat">Abonnement <span class="icon icon--arrow"></span></div>
+                        <div>
+                          <div class="collapse__container">
+                            <div class="input-group input-group--fb-col-spread">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="test">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="test">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="test">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li data-collapse class="list__item">
+                        <div class="list__item__cat">Réservation <span class="icon icon--arrow"></span></div>
+                        <div>
+                          <div class="collapse__container">
+                            <div class="input-group input-group--fb-col-spread">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="test">
+                              <input type="text" class="input-group__input input-group__input--med input-group__input--light-bg" name="" value="" placeholder="test">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__item list__item--br-bottom">
+                        <div class="list__item__cat">Cotisation membre société
+                          <div class="input-group">
+                            <label class="input-group__checkbox" for="cotisation-true"><input id="cotisation-true" type="radio" name="cotisation"> oui</label>
+                            <label class="input-group__checkbox" for="cotisation-false"><input id="cotisation-false" type="radio" name="cotisation"> non</label>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="list__item list__item--last-row">
+                      <button type="btn" class="btn btn--med btn--grey">Supprimer</button>
+                      <button type="submit" class="btn btn--med btn--green">Envoyer</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

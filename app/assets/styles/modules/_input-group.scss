@@ -1,32 +1,47 @@
-$shadow-inset: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
-
-@function shadow-focus($color){
-  @return 0 0 5px 0 rgba($color, .75)
+$shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+@function shadow-focus($color) {
+   @return 0 0 5px 0 rgba($color, .75)
 }
 
-.input-group{
-  &--fb-col-spread{
+.input-group {
+  &--fb-col-spread {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: stretch;
-    .input-group__input+.input-group__input{margin-top: 12px;}
+
+    .input-group__input+.input-group__input {
+      margin-top: 12px;
+    }
   }
-  &--fb-row-spread{
+
+  &--fb-row-spread {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .input-group__input{flex: 0 0 30.5%;}
+
+    .input-group__input {
+      flex: 0 0 30.5%;
+    }
   }
-  &+&{margin-top: 30px;}
-  &__input, &__text-area{
+
+  &+& {
+    margin-top: 30px;
+  }
+
+  &__input,
+  &__text-area {
     border-radius: 5px;
     text-align: left;
-    transition: box-shadow .35s ease;
-    &:focus{outline: none;}
-    &--dark-bg{
+    transition: box-shadow 0.35s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--dark-bg {
       background-color: rgba(240, 246, 253, 0);
       background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
       background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
@@ -36,7 +51,8 @@ $shadow-inset: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
       box-shadow: $shadow-inset;
       color: white;
     }
-    &--light-bg{
+
+    &--light-bg {
       background-color: rgba(240, 246, 253, 0);
       background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
       background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
@@ -46,52 +62,87 @@ $shadow-inset: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
       box-shadow: $shadow-inset;
       color: $grey-font;
     }
-    &--br-green{
+
+    &--br-green {
       border: 1px solid $green;
-      &:focus{
+
+      &:focus {
         box-shadow: $shadow-inset, shadow-focus($green);
       }
     }
   }
-  &__input{
+
+  &__input {
     padding: 0 0.625rem;
-    &--med{
+
+    &--med {
       height: 37px;
       width: 100%;
       font-size: 0.875rem;
     }
-    &--small{
+
+    &--small {
       width: 190px;
       height: 30px;
       font-size: 0.875rem;
     }
   }
-  &__text-area{
+
+  &__text-area {
     width: 100%;
     min-height: 120px;
     resize: vertical;
     padding: 0.625rem;
   }
-  &__input+&__btn{
+
+  &__checkbox {
+    color: $grey-input;
+    cursor: pointer;
+
+    input {
+      vertical-align: middle;
+    }
+
+    &+& {
+      padding-left: 10px;
+    }
+  }
+
+  &__input+&__btn {
     margin-left: 1.25rem;
     vertical-align: bottom;
   }
-  .card--blue &__input, .card--blue &__text-area, .list--blue &__input, .list--blue &__text-area{
-      border: 1px solid $blue;
-      &:focus{
-        box-shadow: $shadow-inset, shadow-focus($blue);
-      }
+
+  .card--blue &__input,
+  .card--blue &__text-area,
+  .list--blue &__input,
+  .list--blue &__text-area {
+    border: 1px solid $blue;
+
+    &:focus {
+      box-shadow: $shadow-inset, shadow-focus($blue);
+    }
   }
-  .card--green &__input, .card--green &__text-area, .list--green &__input, .list--green &__text-area{
-      border: 1px solid $green;
-      &:focus{
-        box-shadow: $shadow-inset, shadow-focus($green);
-      }
+
+  .card--green &__input,
+  .card--green &__text-area,
+  .list--green &__input,
+  .list--green &__text-area {
+    border: 1px solid $green;
+
+    &:focus {
+      box-shadow: $shadow-inset, shadow-focus($green);
+    }
   }
-  .card--orange &__input, .card--orange &__text-area, .list--orange &__input, .list--orange &__text-area{
-      border: 1px solid $orange;
-      &:focus{
-        box-shadow: $shadow-inset, shadow-focus($orange);
-      }
+
+  .card--orange &__input,
+  .card--orange &__text-area,
+  .list--orange &__input,
+  .list--orange &__text-area {
+    border: 1px solid $orange;
+
+    &:focus {
+      box-shadow: $shadow-inset, shadow-focus($orange);
+    }
   }
 }
