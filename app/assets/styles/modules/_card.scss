@@ -1,5 +1,5 @@
-.card{
-  &:before{
+.card {
+  &:before {
     content: "";
     height: 9px;
     position: relative;
@@ -9,97 +9,152 @@
   @extend %panel;
   width: 100%;
   background-color: #ffffff;
-  &__header{
+
+  &__header {
     padding: 0 1.5625rem;
     border-bottom: 1px solid $grey-light;
     height: 45px;
-    &--no-height{height: auto;}
-    &__meta{text-decoration: none; font-size: 0.875rem;}
+
+    &--no-height {
+      height: auto;
+    }
+
+    &__meta {
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
   }
-  &__title{
+
+  &__title {
     display: inline-block;
-    span{font-weight: 400; text-transform: none;}
+
+    span {
+      font-weight: 400;
+      text-transform: none;
+    }
   }
-  &__body{
+
+  &__body {
     padding: 20px 1.5625rem 25px;
     height: calc(100% - 54px);
-    p{
+
+    p {
       margin-top: 0;
       color: $grey-font;
       font-size: 1.0625rem;
-    }
-  }
-  &__content{
-    font-size: 14px;
-    line-height: 20px;
-    text-align: left;
-    p{font-size: inherit;}
-    .red{color: $red; font-weight: 600;}
-  }
-  &--flex{
-    &{
-      &__body{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .card__btn{align-self: flex-start;}
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
-  &--blue{
-    &:before{background-color: $blue;}
-    .card__title{
+
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+
+    p {
+      font-size: inherit;
+    }
+
+    .red {
+      color: $red;
+      font-weight: 600;
+    }
+  }
+
+  &--flex {
+    & {
+      &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card__btn {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+
+  &--blue {
+    &:before {
+      background-color: $blue;
+    }
+
+    .card__title {
       color: $blue !important;
     }
-    .card__btn{
+
+    .card__btn {
       background-color: $blue;
       color: white;
     }
   }
-  &--green{
-    &:before{background-color: $green;}
-    .card__title{
+
+  &--green {
+    &:before {
+      background-color: $green;
+    }
+
+    .card__title {
       color: $green !important;
     }
-    .card__btn{
+
+    .card__btn {
       background-color: $green;
       color: white;
     }
   }
-  &--orange{
-    &:before{background-color: $orange;}
-    .card__title{
+
+  &--orange {
+    &:before {
+      background-color: $orange;
+    }
+
+    .card__title {
       color: $orange !important;
     }
-    .card__btn{
+
+    .card__btn {
       background-color: $orange;
       color: white;
     }
   }
-  &--img{
+
+  &--img {
     width: auto !important;
-    .card__title{
+
+    .card__title {
       width: 100%;
       white-space: nowrap;
       text-align: center;
     }
-    .card__body{
+
+    .card__body {
       padding-top: 0;
       padding-bottom: 0;
-      img{
+
+      img {
         display: block;
       }
     }
-    &__footer{
+
+    &__footer {
       text-align: center;
       border-top: 1px solid $grey-light;
       color: $grey-font;
-      p{
-        font-size: .875rem;
+
+      p {
+        font-size: 0.875rem;
         line-height: 20px;
         margin: 9px 0 10px;
       }
     }
-    &+&{margin-left: 35px;}
+
+    &+& {
+      margin-left: 35px;
+    }
   }
 }
