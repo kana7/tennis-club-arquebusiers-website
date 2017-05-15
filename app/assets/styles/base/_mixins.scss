@@ -1,96 +1,96 @@
-@mixin atSmallest {
-  @media(max-width: 529px){
+@mixin atXs {
+   @media(max-width: #{($atSmall - 1)}px){
     @content;
   }
 }
-
-@mixin atSmall {
-  @media(min-width: 530px){
+@mixin atSm {
+   @media(min-width: #{$atSmall}px){
     @content;
   }
 }
-
-@mixin atMedium {
-  @media(min-width: 800px){
+@mixin atMd {
+   @media(min-width: #{$atMedium}px){
     @content;
   }
 }
-
-@mixin atLarge {
-  @media(min-width: 1010px){
+@mixin atLg {
+   @media(min-width: #{$atLarge}px){
     @content;
   }
 }
-
-@mixin clearfix{
-  &::after{
+@mixin clearfix {
+  &::after {
     content: "";
     clear: both;
     display: table;
   }
 }
-
-@mixin base-style(){
+@mixin base-style() {
   font-family: $font-stack;
   font-size: $font-size;
   color: $font-color;
   line-height: $line-height;
 }
-
-//queries for the grid
-@mixin media($media) {
-  @if $media == atSmall {
-    @media screen and (max-width: $atSmall + px) { @content; }
+@mixin media-screen($media) {
+   @if $media == atSmall{
+    @media screen and (max-width: $atSmall + px) {
+       @content;
+    }
   }
   @else if $media == atMedium {
-    @media screen and (min-width: $atMedium + px) { @content; }
+     @media screen and (min-width: $atMedium + px){
+      @content;
+    }
   }
   @else if $media == atLarge {
-    @media screen and (min-width: $atLarge + px) { @content; }
+     @media screen and (min-width: $atLarge + px){
+      @content;
+    }
   }
 }
-
 @mixin viewport($media, $min: 0, $max: 0) {
-  @if $media == max {
-    @media (max-width: $max + px) { @content; }
+   @if $media == max{
+    @media (max-width: $max + px) {
+       @content;
+    }
   }
   @else if $media == range {
-    @media (min-width: $min + px) and (max-width: $max + px) { @content; }
+     @media (min-width: $min + px) and (max-width: $max + px){
+      @content;
+    }
   }
   @else if $media == min {
-    @media (min-width: $min + px) { @content; }
+     @media (min-width: $min + px){
+      @content;
+    }
   }
 }
-
-@mixin container-base{
+@mixin container-base {
   margin-right: auto;
   margin-left: auto;
   padding-left: ($gridGutterWidth/2);
   padding-right: ($gridGutterWidth/2);
 }
-
-@mixin container($containerWidth){
-  @include container-base;
+@mixin container($containerWidth) {
+   @include container-base;
   width: #{$containerWidth}px;
 }
-
-@mixin vertical-align-middle{
+@mixin vertical-align-middle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-
 @mixin ellipsis($maxWidth: 100%) {
-  max-width:  $maxWidth;
+  max-width: $maxWidth;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-%panel{
+%panel {
   position: relative;
   z-index: 1;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
 }

@@ -22,7 +22,12 @@
   padding: 1.2rem 0;
 
   .row+.row {
-    margin-top: 40px;
+    margin-top: 25px;
+  }
+  @include atMd {
+    .row+.row {
+      margin-top: 40px;
+    }
   }
 
   &--reverse-b-margin {
@@ -35,18 +40,18 @@
 
   &--no-b-padding-until-medium {
     padding-bottom: 0;
-    @include atMedium {
+    @include atMd {
       padding-bottom: 4.5rem;
     }
   }
 
   &--no-b-padding-until-large {
     padding-bottom: 0;
-    @include atLarge {
+    @include atLg {
       padding-bottom: 4.5rem;
     }
   }
-  @include atMedium {
+  @include atMd {
     padding: 2.5rem 0;
 
     &--min-height {

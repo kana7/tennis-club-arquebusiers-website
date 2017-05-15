@@ -6,7 +6,7 @@ export class Slider {
     this.$element = $(selector);
     this.slider = new Flickity(this.$element[0], {
       // options
-      cellAlign: 'center',
+      cellAlign: 'left',
       wrapAround: true,
       contain: true,
       pageDots: false,

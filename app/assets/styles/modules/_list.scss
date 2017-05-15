@@ -11,18 +11,22 @@
 
   &__footer,
   &__header {
-    height: 45px;
-    line-height: 45px;
-    padding: 0 0.875rem;
+    padding: 0.875rem;
     background-color: $blue;
     color: white;
+    @include atLg {
+      padding: 0.875rem;
+    }
 
     & > * {
       display: inline-block;
-      font-size: 1rem;
       margin: 0;
       font-weight: 600;
       text-transform: uppercase;
+      font-size: 0.9375rem;
+      @include atLg {
+        font-size: 1rem;
+      }
 
       &[href]:hover {
         text-decoration: underline;
@@ -36,7 +40,7 @@
     overflow: auto;
 
     &:not(&--height-auto) {
-      flex: 1 0 0;
+      flex: 1 0 100%;
     }
 
     & {
@@ -112,6 +116,11 @@
 
   &__item {
     line-height: 20px;
+    padding: 1.25rem;
+    @include atMd {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     & {
       display: flex;
@@ -137,6 +146,7 @@
 
       span {
         font-weight: 600;
+        white-space: nowrap;
 
         &:hover {
           text-decoration: underline;

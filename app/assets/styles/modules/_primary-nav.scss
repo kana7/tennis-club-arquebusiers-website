@@ -1,54 +1,66 @@
 .primary-nav {
   display: none;
   margin-top: 10px;
-  @include atMedium{
+  margin-bottom: 5px;
+  @include atMd {
     display: block;
-    &--vertical-middle-until-medium{
+
+    &--vertical-middle-until-medium {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: -8px;
     }
   }
-  &>ul{
+
+  & > ul {
     margin: 0;
     padding: 0;
   }
-  &__onglet{
+
+  &__onglet {
     display: inline-block;
     height: 100%;
-    color:  $blue;
+    color: $blue;
     font-size: 0.874rem;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
     text-align: center;
-    transition: all .3s ease;
-    &>a {
+    transition: all 0.3s ease;
+
+    & > a {
       display: block;
       height: 100%;
       line-height: 48px;
       padding: 0 1.25rem;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      transition: all .3s ease;
-      .caret{
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      .caret {
         position: relative;
         margin-left: 8px;
         vertical-align: 7%;
       }
-      &.is-active, &:hover{
+
+      &.is-active,
+      &:hover {
         color: white;
         background-color: $blue;
-        .caret{
+
+        .caret {
           border-top-color: white;
         }
       }
-      &.is-active{cursor: default;}
+
+      &.is-active {
+        cursor: default;
+      }
     }
   }
-  &__dropdown{
-    &:before{
+
+  &__dropdown {
+    &:before {
       content: "";
       height: 5px;
       position: relative;
@@ -66,21 +78,24 @@
     margin: 0;
     padding: 0;
     margin-top: -5px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     transform: translateY(-10px);
-    background-color:#ffffff;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
     width: 270px;
     border-radius: 5px;
     border-top-left-radius: 0;
-    &.is-open{
+
+    &.is-open {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
     }
-    li:not(:first-child){
+
+    li:not(:first-child) {
       border-top: 1px solid $grey-light;
     }
+
     a {
       display: block;
       height: 100%;
@@ -90,24 +105,30 @@
       text-transform: none;
       padding: 0 1.25rem;
       text-align: left;
-      transition: all .3s ease;
-      &:hover{
+      transition: all 0.3s ease;
+
+      &:hover {
         color: white;
         background-color: $blue;
       }
     }
   }
 
-  &--small{
+  &--small {
     li {
       font-size: 1rem;
       height: 20px;
+
       a {
         line-height: 20px;
-        padding: 0 .75rem;
+        padding: 0 0.75rem;
         text-align: center;
-        transition: color .3s ease;
-        &:hover, &.active{color: $orange;}
+        transition: color 0.3s ease;
+
+        &.active,
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }

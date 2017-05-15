@@ -24,6 +24,13 @@
       padding: 0;
       float: left;
 
+      &:first-child {
+        display: none;
+        @include viewport(min, $min: 620) {
+          display: inline-block;
+        }
+      }
+
       &--pull-right {
         float: right;
       }
@@ -41,7 +48,7 @@
             padding-right: 5px;
           }
         }
-        @include atMedium {
+        @include atMd {
           &.margin-left {
             margin-left: 1.875rem;
           }
@@ -66,12 +73,23 @@
       transition: transform 0.3s ease;
       transform-origin: 0 0;
       transform: scale(1);
-      max-width: 417px;
-      margin: 20px 0 3px;
+      max-width: 250px;
+      margin: 20px 0;
+      @include atSm {
+        max-width: 345px;
+      }
+      @include atMd {
+        margin: 20px 0 3px;
+        max-width: 417px;
+      }
     }
 
     &__btn {
+      display: none;
       float: right;
+      @include atMd {
+        display: inline-block;
+      }
     }
   }
 
@@ -81,7 +99,7 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    @include atMedium {
+    @include atMd {
       display: none;
     }
 

@@ -73,7 +73,23 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  @include spacing( ( -$fg-gutter ), margin, horizontal );
+  @include spacing( -( $fg-gutter ), margin, horizontal );
+
+  &--margin-t-until-sm {
+    @include viewport(max, $max: ($atSmall - 1)) {
+      div[class^="col-"]+div[class^="col-"] {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &--margin-t-until-md {
+    @include viewport(max, $max: ($atMedium - 1)) {
+      div[class^="col-"]+div[class^="col-"] {
+        margin-top: 15px;
+      }
+    }
+  }
 }
 
 %#{ $fg-class-col } {
@@ -81,6 +97,9 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
   flex-shrink: 0;
   min-height: 1px;
   @include spacing( ( $fg-gutter ), padding, horizontal );
+  /*&.no-margin-sm {
+    margin-top: 0 !important;
+  }*/
 }
 
 %#{ $fg-class-col }-flex {
@@ -157,7 +176,7 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
   @else {
     $namespace: nth($val, 1);
     $size: nth($val, 2);
-    @media only screen and (min-width: #{$size}) {
+    @media(min-width: #{$size}px) {
        @include grid-sizes( $namespace );
     }
   }
@@ -170,7 +189,7 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
   @else {
     $namespace: nth($val, 1);
     $size: nth($val, 2);
-    @media only screen and (min-width: #{$size}) {
+    @media (min-width: #{$size}px) {
        @include grid-align( $namespace );
     }
   }

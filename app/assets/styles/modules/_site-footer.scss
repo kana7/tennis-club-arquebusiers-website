@@ -7,37 +7,64 @@
   left: 0;
   border-top-radius: 5px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+
   &__top {
     background-color: white;
-    &__header{
+
+    &__header {
       border-bottom: 1px solid $grey-light;
     }
-    &__body{
+
+    &__body {
       padding-top: 30px;
       padding-bottom: 15px;
-      a{
+
+      img:not(:nth-child(3)) {
+        display: none;
+      }
+      @include atSm {
+        img:not(:nth-child(3)):not(:nth-child(2)) {
+          display: none;
+        }
+
+        img:nth-child(2) {
+          display: inline-block;
+        }
+        @include atMd {
+          img {
+            display: inline-block !important;
+          }
+        }
+      }
+
+      a {
         font-size: 0.75rem;
         margin-top: 20px;
       }
     }
   }
+
   &__bottom {
     background-color: $blue;
     color: white;
-    box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.15);
-    &__newsletter-form{
+    box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &__newsletter-form {
       padding: 25px 0;
       border-bottom: 1px solid darken($blue, 2.5);
     }
-    &__copyright{
+
+    &__copyright {
       padding: 12px 0;
       border-top: 1px solid lighten($blue, 2.5);
       font-size: 0.875rem;
     }
-    p{
+
+    p {
       margin-top: 0;
-      font-size: 1.0625rem; /* Approximation causée par une substitution de police */
+      font-size: 1.0625rem;
+      /* Approximation causée par une substitution de police */
       font-weight: 400;
     }
   }
