@@ -38,13 +38,13 @@ $fg-class-off: 'off' !default; /**
  * the grid and applied to global styles.
  *
  */
-$fg-breakpoints: ( (xs), (sm, $atSmall), (md, $atMedium), (lg, $atLarge) ) !default; /**
+$fg-breakpoints: ( (xs), (sm, $atSmall), (md, $atMedium), (lg, $atLarge) ) !default;
+$fg-align: (("start", (justify-content, flex-start)), ("center", (justify-content, center)), ("around", (justify-content, space-around)), ("between", (justify-content, space-between)), ("top", (align-items, flex-start)), ("middle", (align-items, center)), ("bottom", (align-items, flex-end))) !default; /**
  * Class Name Defaults
  *
  * Define class names for columns, rows and offsets in case compatibility with other
  * libraries is necessary.
-
-
+*/
 /**
  * Calculate column size percentage
  */
@@ -130,6 +130,18 @@ $fg-breakpoints: ( (xs), (sm, $atSmall), (md, $atMedium), (lg, $atLarge) ) !defa
     margin-left: 0;
   }
 }
+@mixin grid-align($namespace) {
+  .#{ $fg-class-row } {
+    @each $val in $fg-align {
+      $name: nth($val, 1);
+      $value: nth($val, 2);
+
+      .#{$name}-#{$namespace} {
+        #{nth($value, 1)}: #{nth($value, 2)};
+      }
+    }
+  }
+}
 /**
  * Build the grid in two steps, to help minimize file size
  * Step 1, for each namespace, create the grid-base
@@ -149,6 +161,19 @@ $fg-breakpoints: ( (xs), (sm, $atSmall), (md, $atMedium), (lg, $atLarge) ) !defa
     $size: nth($val, 2);
     @media only screen and (min-width: #{$size}) {
        @include grid-sizes( $namespace );
+    }
+  }
+}
+@each $val in $fg-breakpoints {
+   @if length($val) == 1{
+    $namespace: nth($val, 1);
+    @include grid-align( $namespace );
+  }
+  @else {
+    $namespace: nth($val, 1);
+    $size: nth($val, 2);
+    @media only screen and (min-width: #{$size}) {
+       @include grid-align( $namespace );
     }
   }
 }
