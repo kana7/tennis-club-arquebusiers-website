@@ -11,6 +11,10 @@
   height: 100%;
   background-color: #ffffff;
 
+  &--no-height {
+    height: auto !important;
+  }
+
   &__header {
     padding: 0 1.5625rem;
     border-bottom: 1px solid $grey-light;
@@ -146,6 +150,7 @@
     }
 
     .card__body {
+      height: calc(100% - 114px);
       padding-top: 0;
       padding-bottom: 0;
 

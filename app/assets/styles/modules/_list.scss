@@ -72,11 +72,10 @@
 
     &--fb-space-between {
       justify-content: space-between;
-      flex: 1 0 auto;
-      overflow: hidden;
+      flex: 1 0 auto !important;
     }
 
-    &:not(&--scroll-over-three):not(&--fb-start):not(&--fb-space-between) {
+    &:not(&--scroll-over-three):not(&--fb-start) {
       li {
         flex: 1 0 auto;
       }
@@ -174,7 +173,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-top: 15px;
+      margin: 15px 0;
 
       .btn {
         padding: 0;
@@ -230,6 +229,6 @@
   }
 
   &--fill-height {
-    height: 100%;
+    min-height: 100%;
   }
 }
