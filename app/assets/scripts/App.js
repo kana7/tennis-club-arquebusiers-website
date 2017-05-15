@@ -1,21 +1,29 @@
-import { Dropdown } from './modules/Dropdown';
-import { Slider } from './modules/Slider';
-import { ChrLimits } from './modules/ChrLimits';
-import { Collapse } from './modules/Collapse';
+import {
+  Dropdown
+} from './modules/Dropdown';
+import {
+  Slider
+} from './modules/Slider';
+import {
+  ChrLimits
+} from './modules/ChrLimits';
+import {
+  Collapse
+} from './modules/Collapse';
 
 import $ from 'jquery';
 
-$(function(){
-  $('.primary-nav .primary-nav__onglet').each(function(){
+$(function() {
+  $('.primary-nav .primary-nav__onglet').each(function() {
     new Dropdown($(this));
   });
-  $('.slider, .slider-main:not(.slider-main--static)').each(function(){
+  $('.slider, .slider-main:not(.slider-main--static)').each(function() {
     new Slider($(this));
   });
-  $('[data-chrLimit]').each(function(){
+  $('[data-chrLimit]').each(function() {
     new ChrLimits($(this));
   });
-  $('[data-collapse]').each(function(){
+  $('[data-collapse]').each(function() {
     new Collapse($(this));
   });
 });

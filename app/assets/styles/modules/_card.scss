@@ -90,6 +90,10 @@
     .card__btn {
       background-color: $blue;
       color: white;
+
+      &:hover {
+        background-color: darken($blue, 5%);
+      }
     }
   }
 
@@ -105,6 +109,10 @@
     .card__btn {
       background-color: $green;
       color: white;
+
+      &:hover {
+        background-color: darken($green, 5%);
+      }
     }
   }
 
@@ -120,6 +128,10 @@
     .card__btn {
       background-color: $orange;
       color: white;
+
+      &:hover {
+        background-color: darken($orange, 5%);
+      }
     }
   }
 

@@ -5,6 +5,7 @@
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background ease-in 0.25s;
 
   &--large {
     padding: 1.25rem;
@@ -30,21 +31,37 @@
   &--blue {
     background-color: $blue;
     color: white;
+
+    &:hover {
+      background-color: darken($blue, 5%);
+    }
   }
 
   &--green {
     background-color: $green;
     color: white;
+
+    &:hover {
+      background-color: darken($green, 5%);
+    }
   }
 
   &--orange {
     background-color: $orange;
     color: white;
+
+    &:hover {
+      background-color: darken($orange, 5%);
+    }
   }
 
   &--grey {
     background-color: $grey-btn;
     color: white;
+
+    &:hover {
+      background-color: darken($grey-btn, 5%);
+    }
   }
 
   &__icons {
