@@ -22,7 +22,7 @@ $atLarge: 1010 !default; // Default grid
 // -------------------------
 $gridColumns: 12 !default;
 $gridColumnWidth: 60px !default;
-$gridGutterWidth: 20px !default;
+$gridGutterWidth: 10px !default;
 $gridRowWidth: $gridColumns*($gridColumnWidth+$gridGutterWidth); // Fluid grid - NOT USED
 // -------------------------
 $fluidGridColumnWidth: percentage(($gridColumnWidth+$gridGutterWidth)/$gridRowWidth);

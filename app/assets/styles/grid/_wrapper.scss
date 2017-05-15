@@ -1,18 +1,24 @@
 .wrapper {
-  padding-left: ($gridGutterWidth/2);
-  padding-right: ($gridGutterWidth/2);
+  padding-left: $gridGutterWidth;
+  padding-right: $gridGutterWidth;
   max-width: 1230px;
   margin-right: auto;
   margin-left: auto;
-  &--narrow{
+
+  &--narrow {
     max-width: 470px;
   }
-  &--medium{
+
+  &--medium {
     max-width: 976px;
   }
-  .wrapper{
+
+  .wrapper {
     padding-left: 0;
     padding-right: 0;
   }
-  &--relative{position: relative;}
+
+  &--relative {
+    position: relative;
+  }
 }

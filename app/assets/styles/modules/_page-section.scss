@@ -1,35 +1,45 @@
-.page-bg{
+.page-bg {
   position: relative;
   background-color: $blue-light;
   min-height: 500px;
-    &:before{
-        content: "";
-        background: $blue-light url('../../assets/images/BG_raquette.jpg') no-repeat;
-        background-position: 0 100%;
-        background-clip: border-box;
-        background-origin: content-box;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: 0;
-    }
+
+  &:before {
+    content: "";
+    background: $blue-light url('../../assets/images/BG_raquette.jpg') no-repeat;
+    background-position: 0 100%;
+    background-clip: border-box;
+    background-origin: content-box;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  }
 }
+
 .page-section {
   padding: 1.2rem 0;
-  &--reverse-b-margin{
+
+  .row+.row {
+    margin-top: 40px;
+  }
+
+  &--reverse-b-margin {
     margin-bottom: -35px;
   }
-  &--b-padding-15{
+
+  &--b-padding-15 {
     padding-bottom: 15px !important;
   }
+
   &--no-b-padding-until-medium {
     padding-bottom: 0;
     @include atMedium {
       padding-bottom: 4.5rem;
     }
   }
+
   &--no-b-padding-until-large {
     padding-bottom: 0;
     @include atLarge {
@@ -38,14 +48,17 @@
   }
   @include atMedium {
     padding: 2.5rem 0;
-    &--min-height{
+
+    &--min-height {
       min-height: 500px;
     }
-    &--small-padding{
+
+    &--small-padding {
       padding: 1.2rem 0;
     }
   }
-  &--no-pb{
+
+  &--no-pb {
     padding-bottom: 0 !important;
   }
 }

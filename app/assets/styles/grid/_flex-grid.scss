@@ -67,6 +67,7 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
 /**
  * Row wrapper class, flex box parent.
  */
+
 .#{ $fg-class-row } {
   box-sizing: border-box;
   display: flex;
@@ -76,9 +77,6 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
 }
 
 %#{ $fg-class-col } {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   min-height: 1px;
@@ -87,6 +85,8 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
 
 %#{ $fg-class-col }-flex {
   @extend %#{ $fg-class-col };
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%;
@@ -131,14 +131,12 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
   }
 }
 @mixin grid-align($namespace) {
-  .#{ $fg-class-row } {
-    @each $val in $fg-align {
-      $name: nth($val, 1);
-      $value: nth($val, 2);
+   @each $val in $fg-align{
+    $name: nth($val, 1);
+    $value: nth($val, 2);
 
-      .#{$name}-#{$namespace} {
-        #{nth($value, 1)}: #{nth($value, 2)};
-      }
+    .#{ $fg-class-row }.#{$name}-#{$namespace} {
+      #{nth($value, 1)}: #{nth($value, 2)};
     }
   }
 }
