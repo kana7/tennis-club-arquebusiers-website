@@ -39,6 +39,17 @@
     height: 440px;
     overflow: hidden;
 
+    img {
+      position: absolute;
+      top: -9999px;
+      right: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
     &__caption {
       background-color: rgba(0,0,0,0.85);
       position: absolute;

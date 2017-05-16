@@ -46,7 +46,9 @@
   &__title {
     margin: 0;
     @include atMd {
-       @include ellipsis;
+      &:not(&--no-ellipsis) {
+        @include ellipsis;
+      }
     }
 
     span {
@@ -161,6 +163,8 @@
 
   &--img {
     width: auto !important;
+    height: auto !important;
+    margin-top: 10px;
 
     .card__title {
       width: 100%;
@@ -168,13 +172,21 @@
       text-align: center;
     }
 
+    .card__header {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .card__body {
-      height: calc(100% - 114px);
+      height: calc(100% - 112px);
       padding-top: 0;
       padding-bottom: 0;
 
       img {
         display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 165px;
       }
     }
 
@@ -189,9 +201,10 @@
         margin: 9px 0 10px;
       }
     }
-
-    &+& {
-      margin-left: 35px;
+    @include atSm {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 }

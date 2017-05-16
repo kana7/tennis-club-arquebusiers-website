@@ -62,6 +62,13 @@
       }
     }
 
+    &--no-padding {
+      .list__item {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+
     &--scroll-over-three {
       li {
         flex: 0 0 33%;
@@ -182,13 +189,24 @@
       width: 100%;
       align-self: flex-end;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       margin: 15px 0;
 
+      & > .btn:last-child {
+        margin-top: 10px;
+        @include atSm {
+          margin-top: 0;
+        }
+      }
+
       .btn {
         padding: 0;
-        flex: 0 0 115px;
+        flex: 0 0 100%;
+        @include atSm {
+          flex: 0 0 115px;
+        }
       }
     }
 

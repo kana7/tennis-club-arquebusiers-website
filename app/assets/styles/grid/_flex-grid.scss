@@ -67,13 +67,17 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
 /**
  * Row wrapper class, flex box parent.
  */
-
 .#{ $fg-class-row } {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   @include spacing( -( $fg-gutter ), margin, horizontal );
+
+  &--no-gutters {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
   &--margin-t-until-sm {
     @include viewport(max, $max: ($atSmall - 1)) {

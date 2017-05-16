@@ -15,6 +15,10 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     }
   }
 
+  &--checkbox {
+    white-space: nowrap;
+  }
+
   &--fb-row-spread {
     display: flex;
     flex-wrap: wrap;
@@ -23,12 +27,18 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     align-items: center;
 
     & > * {
-      &:last-child {
+      flex-basis: 100%;
+
+      &:nth-child(2) {
         margin-top: 10px;
       }
     }
     @include atSm {
-      & > *:first-child {
+      & > * {
+        flex-basis: auto;
+      }
+
+      & > *:nth-child(2) {
         margin-top: 0;
       }
     }
@@ -40,6 +50,7 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     & > .input-group__input {
       flex: 0 0 100%;
       flex-wrap: wrap;
+      min-width: 0;
 
       &:not(:first-child) {
         margin-top: 15px;
@@ -60,7 +71,7 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     &--col-4 {
       & > .input-group,
       & > .input-group__input {
-        flex: 0 0 31.4%;
+        flex: 0 0 30.4%;
       }
     }
 

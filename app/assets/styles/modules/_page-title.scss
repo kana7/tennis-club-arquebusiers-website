@@ -1,21 +1,28 @@
-.page-title{
+.page-title {
   position: relative;
   z-index: 1;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
+  text-align: center;
   color: $blue;
   margin: -5px 0 -15px;
-}
-.page-subtitle{
-    text-transform: uppercase;
-    font-size: 1.0625rem;
-    color: $blue;
-    margin: 12px 0 10px;
+  @include atSm {
+    font-size: 1.5rem;
+    text-align: left;
+  }
 }
 
-.page-title, .page-subtitle{
-  &--no-uppercase{
+.page-subtitle {
+  text-transform: uppercase;
+  font-size: 1.0625rem;
+  color: $blue;
+  margin: 12px 0 10px;
+}
+
+.page-subtitle,
+.page-title {
+  &--no-uppercase {
     text-transform: none !important;
   }
 }
