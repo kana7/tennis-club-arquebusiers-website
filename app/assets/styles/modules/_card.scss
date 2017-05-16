@@ -30,18 +30,24 @@
     }
 
     &__meta {
-      display: none;
       text-decoration: none;
       font-size: 0.875rem;
-      @include atSm {
-        display: inline-block;
-      }
+    }
+  }
+
+  &__link,
+  &__meta {
+    display: none;
+    @include atSm {
+      display: inline-block;
     }
   }
 
   &__title {
     margin: 0;
-    @include ellipsis;
+    @include atMd {
+       @include ellipsis;
+    }
 
     span {
       font-weight: 400;

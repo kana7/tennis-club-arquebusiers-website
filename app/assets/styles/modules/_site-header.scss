@@ -74,12 +74,12 @@
       transform-origin: 0 0;
       transform: scale(1);
       max-width: 250px;
-      margin: 20px 0;
+      margin: 20px 0 20px -8px;
       @include atSm {
         max-width: 345px;
       }
       @include atMd {
-        margin: 20px 0 3px;
+        margin: 20px 0 3px -10px;
         max-width: 417px;
       }
     }

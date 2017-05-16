@@ -21,27 +21,63 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
 
-  &--col-4 {
-    & > .input-group,
-    & > .input-group__input {
-      flex: 0 0 30.5%;
+    & > * {
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+    @include atSm {
+      & > *:first-child {
+        margin-top: 0;
+      }
     }
   }
 
+  &--col-4,
   &--col-6 {
     & > .input-group,
     & > .input-group__input {
-      flex: 0 0 47%;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+  @include atSm {
+    &--col-4,
+    &--col-6 {
+      & > .input-group,
+      & > .input-group__input {
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &--col-4 {
+      & > .input-group,
+      & > .input-group__input {
+        flex: 0 0 31.4%;
+      }
+    }
+
+    &--col-6 {
+      & > .input-group,
+      & > .input-group__input {
+        flex: 0 0 47%;
+      }
     }
   }
 
   &+& {
     margin-top: 15px;
-
-    &--margin-top-30 {
-      margin-top: 30px;
+    @include atSm {
+      &--margin-top-30 {
+        margin-top: 30px;
+      }
     }
   }
 
@@ -123,6 +159,7 @@ $shadow-inset: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
 
   &__input+&__btn {
     vertical-align: bottom;
+    margin-top: 5px;
   }
 
   .card--blue &__input,

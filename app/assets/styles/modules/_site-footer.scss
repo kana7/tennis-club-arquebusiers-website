@@ -20,6 +20,10 @@
       padding-top: 30px;
       padding-bottom: 15px;
 
+      img {
+        height: 45px;
+      }
+
       img:not(:nth-child(3)) {
         display: none;
       }
