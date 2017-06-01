@@ -1,5 +1,13 @@
-.content-wrapper{
+.content-wrapper {
   position: relative;
   min-height: 100%;
   padding-bottom: 264px;
+  background-color: $grey-light;
+  right: 0;
+  box-shadow: 2px 0 10px 0 rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+
+  &--open-mobile-menu {
+    right: 247px;
+  }
 }

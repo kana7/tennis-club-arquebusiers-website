@@ -10,6 +10,7 @@ import {
 import {
   Collapse
 } from './modules/Collapse';
+import MobileMenu from './modules/MobileMenu';
 
 import $ from 'jquery';
 
@@ -26,4 +27,5 @@ $(function() {
   $('[data-collapse]').each(function() {
     new Collapse($(this));
   });
+  var mobileMenu = new MobileMenu();
 });
