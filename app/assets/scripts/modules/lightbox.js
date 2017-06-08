@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export class Lightbox {
   /*
   Ce dont j'ai besoin:

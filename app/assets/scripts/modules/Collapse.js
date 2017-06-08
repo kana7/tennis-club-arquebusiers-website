@@ -1,26 +1,23 @@
-import $ from 'jquery';
-
-export class Collapse{
+export class Collapse {
   constructor(element, trigger, index) {
     this.element = element;
-    this.trigger = (typeof trigger !== "undefined")?trigger:this.element.children(":first");
+    this.trigger = (typeof trigger !== "undefined") ? trigger : this.element.children(":first");
     this.content = this.trigger.next();
     this.bindEvents();
-    if(index<1){ //open first element
+    if (index < 1) { //open first element
       this.toggleOpen();
     }
   }
-  bindEvents(){
+  bindEvents() {
     const that = this;
     this.trigger.on('click', this.toggleOpen.bind(that));
   }
 
-  toggleOpen(){
-    if (this.content[0].style.maxHeight){
+  toggleOpen() {
+    if (this.content[0].style.maxHeight) {
       this.content[0].style.maxHeight = null;
       this.element.removeClass('collapse--is-open');
-    }
-    else {
+    } else {
       this.content[0].style.maxHeight = this.content.prop('scrollHeight') + 'px'
       this.element.addClass('collapse--is-open');
     }

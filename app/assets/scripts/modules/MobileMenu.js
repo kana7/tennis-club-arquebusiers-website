@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class MobileMenu {
   constructor() {
     this.siteHeader = $('.content-wrapper');

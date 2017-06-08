@@ -1,4 +1,3 @@
-import $ from 'jquery';
 var Flickity = require('flickity');
 
 export class Slider {

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 /*
 Dropdown.js
 --------------------------------------------------------------------------------
@@ -18,23 +16,23 @@ HTML MARKUP:
 */
 export class Dropdown {
   constructor($element) {
-      this.element = $element;
-      this.trigger = this.element.find('a[data-menu]');
-      this.dropdown = this.trigger.next();
-      this.bindEvents();
+    this.element = $element;
+    this.trigger = this.element.find('a[data-menu]');
+    this.dropdown = this.trigger.next();
+    this.bindEvents();
   }
-  bindEvents(){
+  bindEvents() {
     this.element.on({
       'mouseenter': this.openDropdown.bind(this),
       'mouseleave': this.closeDropdown.bind(this)
     });
   }
-  openDropdown(event){
+  openDropdown(event) {
     event.preventDefault();
     this.trigger.addClass('is-active');
     this.dropdown.addClass('is-open');
   }
-  closeDropdown(){
+  closeDropdown() {
     this.trigger.removeClass('is-active');
     this.dropdown.removeClass('is-open');
   }

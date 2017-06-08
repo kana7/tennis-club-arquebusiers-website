@@ -12,7 +12,8 @@ import {
 } from './modules/Collapse';
 import MobileMenu from './modules/MobileMenu';
 
-import $ from 'jquery';
+//import $ from 'jquery';
+//import lightGallery from 'lightGallery';
 
 $(function() {
   $('.primary-nav .primary-nav__onglet').each(function() {
@@ -28,4 +29,6 @@ $(function() {
     new Collapse($(this));
   });
   var mobileMenu = new MobileMenu();
+  //$('#lightgallery').lightGallery();
+
 });
