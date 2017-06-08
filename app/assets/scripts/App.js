@@ -12,8 +12,10 @@ import {
 } from './modules/Collapse';
 import MobileMenu from './modules/MobileMenu';
 
-//import $ from 'jquery';
-//import lightGallery from 'lightGallery';
+require('lightgallery.js');
+require('lg-zoom.js');
+require('lg-pager.js');
+require('lg-fullscreen.js');
 
 $(function() {
   $('.primary-nav .primary-nav__onglet').each(function() {
@@ -29,6 +31,9 @@ $(function() {
     new Collapse($(this));
   });
   var mobileMenu = new MobileMenu();
-  //$('#lightgallery').lightGallery();
-
+  $('.slider').each(function() {
+    lightGallery($(this)[0], {
+      selector: '.slider__cell'
+    });
+  });
 });

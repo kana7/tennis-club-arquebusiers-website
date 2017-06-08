@@ -28,11 +28,5 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    root: __dirname,
-    alias: {
-      'lightGallery': 'node_modules/lightgallery.js/dist/js/lightgallery.min' // relative to node_modules
-    }
-  },
   devtool: 'eval-source-map'
 }
