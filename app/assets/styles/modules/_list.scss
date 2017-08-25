@@ -76,6 +76,7 @@
     }
 
     &--height-auto {
+      min-height: auto !important;
       .list__item {
         padding-top: 15px;
         padding-bottom: 15px;

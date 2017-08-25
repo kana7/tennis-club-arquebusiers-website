@@ -24,7 +24,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: $global-border-radius;
     background-color: rgba(0,0,0,0.75);
     max-width: 1500px;
     width: 100%;

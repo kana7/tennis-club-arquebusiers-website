@@ -29,3 +29,5 @@ $fluidGridColumnWidth: percentage(($gridColumnWidth+$gridGutterWidth)/$gridRowWi
 @function getColumnWidth($columnNumber) {
    @return $columnNumber*$fluidGridColumnWidth;
 }
+// -------------------------
+$global-border-radius: 5px;

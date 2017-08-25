@@ -35,7 +35,7 @@
       height: 100%;
       line-height: 48px;
       padding: 0 1.25rem;
-      border-radius: 5px 5px 0 0;
+      border-radius: $global-border-radius $global-border-radius 0 0;
       transition: all 0.3s ease;
 
       .caret {
@@ -84,7 +84,7 @@
     background-color: #ffffff;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
     min-width: 280px;
-    border-radius: 5px;
+    border-radius: $global-border-radius;
     border-top-left-radius: 0;
 
     &.is-open {
