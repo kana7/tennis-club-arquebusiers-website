@@ -36,6 +36,10 @@
       border-bottom: 1px solid darken($blue-light, 5%);
     }
   }
+  caption{
+    caption-side: bottom;
+    margin-top: 10px;
+  }
   &--first-column-bold{
     tbody tr td:first-child{font-weight: 600;}
   }
