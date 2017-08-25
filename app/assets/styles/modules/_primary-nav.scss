@@ -1,7 +1,7 @@
+
 .primary-nav {
   display: none;
   margin-top: 10px;
-  margin-bottom: 5px;
   margin-left: -20px;
   @include atMd {
     display: block;
@@ -35,7 +35,7 @@
       height: 100%;
       line-height: 48px;
       padding: 0 1.25rem;
-      border-radius: 5px;
+      border-radius: 5px 5px 0 0;
       transition: all 0.3s ease;
 
       .caret {
@@ -83,7 +83,7 @@
     transform: translateY(-10px);
     background-color: #ffffff;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
-    width: 270px;
+    min-width: 280px;
     border-radius: 5px;
     border-top-left-radius: 0;
 
