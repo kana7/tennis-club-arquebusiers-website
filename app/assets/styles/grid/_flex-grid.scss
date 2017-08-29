@@ -94,6 +94,10 @@ $fg-align: (("start", (justify-content, flex-start)), ("center", (justify-conten
       }
     }
   }
+
+  &--reverse-row{
+    flex-direction: row-reverse !important;
+  }
 }
 
 %#{ $fg-class-col } {
